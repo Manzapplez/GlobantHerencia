@@ -5,6 +5,10 @@ import entidades.Lavadora;
 
 public class Main {
 
+    /* En el main debemos realizar lo siguiente:
+    Vamos a crear una Lavadora y un Televisor y llamar a los métodos necesarios para mostrar
+    el precio final de los dos electrodomésticos. */
+    
     public static void main(String[] args) {
         Electrodomestico a = new Electrodomestico();
         Electrodomestico b = new Lavadora();
