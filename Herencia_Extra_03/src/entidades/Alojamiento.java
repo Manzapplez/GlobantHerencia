@@ -51,9 +51,10 @@ public abstract class Alojamiento {
 
     @Override
     public String toString() {
-        return nombre
+        return "\n \n#################################\n" + nombre
                 + "\nUbicado en; " + direccion + "(" + localidad + ")"
-                + "\nGerente; " + gerente;
+                + "\nGerente; " + gerente
+                ;
     }
 
 }

@@ -9,11 +9,14 @@ public class Hotel4Estrellas extends Hotel {
     public Hotel4Estrellas() {
     }
 
-    public Hotel4Estrellas(String nombreRestaurante, int capacidadRestaurante, int cantHabitaciones, int numCamas, int cantPisos, int precioHabitacion, String nombre, String direccion, String localidad, String gerente) {
-        super(cantHabitaciones, numCamas, cantPisos, precioHabitacion, nombre, direccion, localidad, gerente);
+    public Hotel4Estrellas(String tipoGimnasio, String nombreRestaurante, int capacidadRestaurante,
+            int cantHabitaciones, int numCamas, int cantPisos,
+            String nombre, String direccion, String localidad, String gerente) {
+        super(cantHabitaciones, numCamas, cantPisos, nombre, direccion, localidad, gerente);
+        this.tipoGimnasio = tipoGimnasio;
         this.nombreRestaurante = nombreRestaurante;
         this.capacidadRestaurante = capacidadRestaurante;
-//        super.precioHabitacion = this.getPrecio();
+//        this.precioHabitacion = getPrecio();
     }
 
     public String getTipoGimnasio() {
@@ -45,12 +48,12 @@ public class Hotel4Estrellas extends Hotel {
         return super.toString()
                 + "\nRestaurante; " + nombreRestaurante
                 + "\nCon una capacidad de; " + capacidadRestaurante
-                + "\nprecioHabitaciones=" + super.precioHabitacion;
+               ;
     }
 
     @Override
     public int getPrecio() {
-        return super.getPrecio() * valorRestaurante() + valorGimnasio();
+        return super.getPrecio() + valorRestaurante() + valorGimnasio();
     }
 
     private int valorGimnasio() {

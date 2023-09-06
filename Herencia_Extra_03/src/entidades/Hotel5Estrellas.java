@@ -9,12 +9,15 @@ public class Hotel5Estrellas extends Hotel4Estrellas {
     public Hotel5Estrellas() {
     }
 
-    public Hotel5Estrellas(int cantSalonesConferencia, int cantSuites, int cantLimosinas, String nombreRestaurante, int capacidadRestaurante, int cantHabitaciones, int numCamas, int cantPisos, int precioHabitacion, String nombre, String direccion, String localidad, String gerente) {
-        super(nombreRestaurante, capacidadRestaurante, cantHabitaciones, numCamas, cantPisos, precioHabitacion, nombre, direccion, localidad, gerente);
+    public Hotel5Estrellas(String tipoGimnasio, int cantSalonesConferencia, int cantSuites, int cantLimosinas, String nombreRestaurante,
+            int capacidadRestaurante, int cantHabitaciones, int numCamas, int cantPisos, int precioHabitacion,
+            String nombre, String direccion, String localidad, String gerente) {
+        super(tipoGimnasio, nombreRestaurante, capacidadRestaurante,
+                cantHabitaciones, numCamas, cantPisos, nombre, direccion, localidad, gerente);
         this.cantSalonesConferencia = cantSalonesConferencia;
         this.cantSuites = cantSuites;
         this.cantLimosinas = cantLimosinas;
-        //        super.precioHabitacion = this.getPrecio();
+//        this.precioHabitacion = getPrecio();
     }
 
     public int getCantSalonesConferencia() {
@@ -43,7 +46,7 @@ public class Hotel5Estrellas extends Hotel4Estrellas {
 
     @Override
     public String toString() {
-        return "\nCuenta con " + cantSalonesConferencia + " salones de conferencia"
+        return super.toString() + "\nCuenta con " + cantSalonesConferencia + " salones de conferencia"
                 + "\n" + cantSuites + " suites"
                 + "\ny " + cantLimosinas + " limosinas";
     }
